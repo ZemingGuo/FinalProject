@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/bg"
+    android:background="@drawable/bgg"
     >
 
     <TextView
@@ -21,10 +21,10 @@
 
     <Button
         android:id="@+id/startGame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="aaaaaaaaaaaaaaaaaaaa game aaaaaaa"
-        android:visibility="invisible"
+        android:layout_width="326dp"
+        android:layout_height="49dp"
+        android:text="Start Game"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
