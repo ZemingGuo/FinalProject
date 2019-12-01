@@ -8,6 +8,16 @@
     android:background="@drawable/bgg">
 
     <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="316dp"
+        android:layout_height="503dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/renwulihui" />
+
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="477dp"
         android:layout_height="126dp"
