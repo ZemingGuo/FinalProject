@@ -11,6 +11,7 @@
         android:id="@+id/imageView3"
         android:layout_width="316dp"
         android:layout_height="503dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,5 +54,31 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.949"
         app:srcCompat="@android:drawable/ic_media_play" />
+
+    <TextView
+        android:id="@+id/conversation"
+        android:layout_width="371dp"
+        android:layout_height="126dp"
+        android:text="前辈！"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.921" />
+
+    <TextView
+        android:id="@+id/characterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#C1FCFBFB"
+        android:text=" Miki "
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
