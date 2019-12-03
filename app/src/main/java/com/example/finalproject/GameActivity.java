@@ -38,10 +38,10 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void addStory() {
-        conversation.add("前辈！");
-        conversation.add("其实我一直都很喜欢你！");
-        conversation.add("哦。");
-        conversation.add("好敷衍呜呜呜...");
+        conversation.add("Hey！");
+        conversation.add("My name is Miki!");
+        conversation.add("Nice to meet you!");
+        conversation.add("Nice to meet you!");
     }
     private void narrator() {
         TextView characterName = findViewById(R.id.characterName);
