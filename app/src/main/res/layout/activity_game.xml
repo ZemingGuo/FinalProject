@@ -59,7 +59,7 @@
         android:id="@+id/conversation"
         android:layout_width="371dp"
         android:layout_height="126dp"
-        android:text="It's the first day of my senoir year."
+        android:text="It's the first day of my senoir year.."
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
