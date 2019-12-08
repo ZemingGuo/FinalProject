@@ -2,11 +2,9 @@ package com.example.finalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -38,7 +36,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void addStory() {
-        conversation.add("Hey！");
+        conversation.add("(Walks in)");
         conversation.add("My name is Miki!");
         conversation.add("Nice to meet you!");
         conversation.add("Nice to meet you!");
