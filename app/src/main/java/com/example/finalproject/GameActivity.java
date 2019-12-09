@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -48,7 +47,7 @@ public class GameActivity extends AppCompatActivity {
         conversation.add("I finally meet you, Watanabe jun~");
         conversation.add("Your choice...");
         conversation.add("Ummm...He-hello.");
-        conversation.add("(smiles) 'Nice to meet you' is what we say in Japanese when we first meet other people~");
+        conversation.add("(Smiles) 'Nice to meet you' is what we say in Japanese when we first meet other people~");
         conversation.add("Haha you are right... Nice to meet you~!");
         conversation.add("Miki smiles to you without a word and walk away.");
         conversation.add("A trace of disappointment appears in her eyes.");
@@ -80,8 +79,6 @@ public class GameActivity extends AppCompatActivity {
             characterName.setText("Miki");
             teacher.setVisibility(View.INVISIBLE);
             miki.setVisibility(View.VISIBLE);
-            //characterName.setTextColor(Color.parseColor("#2A3A7D"));
-            //conversation.setTextColor(Color.parseColor("#2A3A7D"));
         }
         if (index == 5) {
             characterName.setVisibility(View.INVISIBLE);
@@ -104,7 +101,7 @@ public class GameActivity extends AppCompatActivity {
                 value += 1;
                 conv.setText(conversation.get(index));
                 narrator();
-                index++;
+                index = 13;
                 choice1.setVisibility(View.INVISIBLE);
                 choice2.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
@@ -114,9 +111,10 @@ public class GameActivity extends AppCompatActivity {
             });
             choice2.setOnClickListener(unused -> {
                 value += 2;
+                index = 10;
                 conv.setText(conversation.get(index));
                 narrator();
-                index = 10;
+                index++;
                 choice1.setVisibility(View.INVISIBLE);
                 choice2.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
@@ -125,9 +123,10 @@ public class GameActivity extends AppCompatActivity {
                 text3.setVisibility(View.INVISIBLE);
             });
             choice3.setOnClickListener(unused -> {
+                index = 12;
                 conv.setText(conversation.get(index));
                 narrator();
-                index = 12;
+                index++;
                 choice1.setVisibility(View.INVISIBLE);
                 choice2.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
@@ -136,22 +135,13 @@ public class GameActivity extends AppCompatActivity {
                 text3.setVisibility(View.INVISIBLE);
             });
         }
-        /*
-        if (index == 9) {
-            choice1.setVisibility(View.INVISIBLE);
-            choice2.setVisibility(View.INVISIBLE);
-            choice3.setVisibility(View.INVISIBLE);
-            text1.setVisibility(View.INVISIBLE);
-            text2.setVisibility(View.INVISIBLE);
-            text3.setVisibility(View.INVISIBLE);
-        }
-        */
         if (index == 10) {
             characterName.setText("You");
-            index = 12;
         }
         if (index == 11) {
+            characterName.setVisibility(View.VISIBLE);
             characterName.setText("Miki");
+            index += 2;
         }
         if (index == 12) {
             characterName.setVisibility(View.INVISIBLE);
