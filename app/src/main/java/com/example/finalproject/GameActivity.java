@@ -3,6 +3,7 @@ package com.example.finalproject;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -25,13 +26,15 @@ public class GameActivity extends AppCompatActivity {
         addStory();
         ImageButton next = findViewById(R.id.next);
         TextView conv = findViewById(R.id.conversation);
+        Intent intent = new Intent(this, Chapter2Activity.class);
         next.setOnClickListener(unused -> {
             if (index < conversation.size()) {
                 conv.setText(conversation.get(index));
                 narrator();
                 index++;
             } else {
-                finish();
+                intent.putExtra("value", value);
+                startActivity(intent);
             }
         });
     }
