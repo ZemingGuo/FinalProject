@@ -105,19 +105,38 @@ public class GameActivity extends AppCompatActivity {
                 conv.setText(conversation.get(index));
                 narrator();
                 index++;
+                choice1.setVisibility(View.INVISIBLE);
+                choice2.setVisibility(View.INVISIBLE);
+                choice3.setVisibility(View.INVISIBLE);
+                text1.setVisibility(View.INVISIBLE);
+                text2.setVisibility(View.INVISIBLE);
+                text3.setVisibility(View.INVISIBLE);
             });
             choice2.setOnClickListener(unused -> {
                 value += 2;
                 conv.setText(conversation.get(index));
                 narrator();
                 index++;
+                choice1.setVisibility(View.INVISIBLE);
+                choice2.setVisibility(View.INVISIBLE);
+                choice3.setVisibility(View.INVISIBLE);
+                text1.setVisibility(View.INVISIBLE);
+                text2.setVisibility(View.INVISIBLE);
+                text3.setVisibility(View.INVISIBLE);
             });
             choice3.setOnClickListener(unused -> {
                 conv.setText(conversation.get(index));
                 narrator();
                 index++;
+                choice1.setVisibility(View.INVISIBLE);
+                choice2.setVisibility(View.INVISIBLE);
+                choice3.setVisibility(View.INVISIBLE);
+                text1.setVisibility(View.INVISIBLE);
+                text2.setVisibility(View.INVISIBLE);
+                text3.setVisibility(View.INVISIBLE);
             });
         }
+        /*
         if (index == 9) {
             choice1.setVisibility(View.INVISIBLE);
             choice2.setVisibility(View.INVISIBLE);
@@ -126,5 +145,6 @@ public class GameActivity extends AppCompatActivity {
             text2.setVisibility(View.INVISIBLE);
             text3.setVisibility(View.INVISIBLE);
         }
+        */
     }
 }
