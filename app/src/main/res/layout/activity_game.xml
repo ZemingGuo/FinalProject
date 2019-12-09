@@ -121,7 +121,7 @@
         app:srcCompat="@drawable/ui" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/textup"
         android:layout_width="475dp"
         android:layout_height="168dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -151,7 +151,7 @@
         android:layout_height="126dp"
         android:text="It's the first day of my senoir year.."
         android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/textup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
