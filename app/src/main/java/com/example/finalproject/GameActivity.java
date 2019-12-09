@@ -116,7 +116,7 @@ public class GameActivity extends AppCompatActivity {
                 value += 2;
                 conv.setText(conversation.get(index));
                 narrator();
-                index++;
+                index = 10;
                 choice1.setVisibility(View.INVISIBLE);
                 choice2.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
@@ -127,7 +127,7 @@ public class GameActivity extends AppCompatActivity {
             choice3.setOnClickListener(unused -> {
                 conv.setText(conversation.get(index));
                 narrator();
-                index++;
+                index = 12;
                 choice1.setVisibility(View.INVISIBLE);
                 choice2.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
@@ -146,5 +146,18 @@ public class GameActivity extends AppCompatActivity {
             text3.setVisibility(View.INVISIBLE);
         }
         */
+        if (index == 10) {
+            characterName.setText("You");
+            index = 12;
+        }
+        if (index == 11) {
+            characterName.setText("Miki");
+        }
+        if (index == 12) {
+            characterName.setVisibility(View.INVISIBLE);
+        }
+        if (index == 13) {
+            characterName.setVisibility(View.INVISIBLE);
+        }
     }
 }
