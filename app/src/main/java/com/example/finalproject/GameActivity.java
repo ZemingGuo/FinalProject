@@ -48,7 +48,10 @@ public class GameActivity extends AppCompatActivity {
         conversation.add("I finally meet you, Watanabe jun~");
         conversation.add("Your choice...");
         conversation.add("Ummm...He-hello.");
-        conversation.add("")
+        conversation.add("(smiles) 'Nice to meet you' is what we say in Japanese when we first meet other people~");
+        conversation.add("Haha you are right... Nice to meet you~!");
+        conversation.add("Miki smiles to you without a word and walk away.");
+        conversation.add("A trace of disappointment appears in her eyes.");
     }
     private void narrator() {
         TextView characterName = findViewById(R.id.characterName);
