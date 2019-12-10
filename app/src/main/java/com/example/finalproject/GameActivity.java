@@ -17,7 +17,7 @@ import java.util.List;
 public class GameActivity extends AppCompatActivity {
     private List<String> conversation = new ArrayList<>();
     int index = 0;
-    private int value = 0;
+    private static int value = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,8 @@ public class GameActivity extends AppCompatActivity {
                 narrator();
                 index++;
             } else {
-                intent.putExtra("value", value);
+                //intent.putExtra("value", value);
+                finish();
                 startActivity(intent);
             }
         });
@@ -67,6 +68,7 @@ public class GameActivity extends AppCompatActivity {
         TextView text1 = findViewById(R.id.text1);
         TextView text2 = findViewById(R.id.text2);
         TextView text3 = findViewById(R.id.text3);
+        ImageButton next = findViewById(R.id.next);
         if (index == 0) {
             miki.setVisibility(View.VISIBLE);
             characterName.setVisibility(View.VISIBLE);
@@ -100,6 +102,7 @@ public class GameActivity extends AppCompatActivity {
             text1.setVisibility(View.VISIBLE);
             text2.setVisibility(View.VISIBLE);
             text3.setVisibility(View.VISIBLE);
+            next.setVisibility(View.INVISIBLE);
             choice1.setOnClickListener(unused -> {
                 value += 1;
                 conv.setText(conversation.get(index));
@@ -111,6 +114,7 @@ public class GameActivity extends AppCompatActivity {
                 text1.setVisibility(View.INVISIBLE);
                 text2.setVisibility(View.INVISIBLE);
                 text3.setVisibility(View.INVISIBLE);
+                next.setVisibility(View.VISIBLE);
             });
             choice2.setOnClickListener(unused -> {
                 value += 2;
@@ -124,6 +128,7 @@ public class GameActivity extends AppCompatActivity {
                 text1.setVisibility(View.INVISIBLE);
                 text2.setVisibility(View.INVISIBLE);
                 text3.setVisibility(View.INVISIBLE);
+                next.setVisibility(View.VISIBLE);
             });
             choice3.setOnClickListener(unused -> {
                 index = 12;
@@ -136,6 +141,7 @@ public class GameActivity extends AppCompatActivity {
                 text1.setVisibility(View.INVISIBLE);
                 text2.setVisibility(View.INVISIBLE);
                 text3.setVisibility(View.INVISIBLE);
+                next.setVisibility(View.VISIBLE);
             });
         }
         if (index == 10) {
@@ -152,5 +158,9 @@ public class GameActivity extends AppCompatActivity {
         if (index == 13) {
             characterName.setVisibility(View.INVISIBLE);
         }
+    }
+
+    public static int getValue() {
+        return value;
     }
 }
