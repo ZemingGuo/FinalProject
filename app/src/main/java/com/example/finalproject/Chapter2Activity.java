@@ -30,7 +30,7 @@ public class Chapter2Activity extends AppCompatActivity {
         addStory();
         ImageButton next = findViewById(R.id.next);
         TextView conv = findViewById(R.id.conversation);
-        Intent intent = new Intent(this, Chapter4Activity.class);
+        Intent intent = new Intent(this, Chapter3Activity.class);
         pause = findViewById(R.id.pause);
         play = findViewById(R.id.play);
         play.setVisibility(View.INVISIBLE);

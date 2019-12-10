@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Chapter4Activity extends AppCompatActivity {
 
-    private static int value = Chapter2Activity.getValue();
+    private static int value = Chapter3Activity.getValue();
     private int index = 0;
     private List<String> conversation = new ArrayList<>();
     private MediaPlayer mMediaPlayer;
@@ -98,12 +98,27 @@ public class Chapter4Activity extends AppCompatActivity {
         //旁白
         conversation.add("From then on, they became each other's best friend.");
         conversation.add("Until one day....");
-        //女主
-        conversation.add("");
+        conversation.add("Miki's parents took her back to America.");
+        conversation.add("Then I have never seen her again...");
+        conversation.add("Until I saw Miki in my class.");
+        conversation.add("She must be Miki from my childhood.");
+        conversation.add("And I finally recall her...");
+        conversation.add("...");
+        conversation.add("(One year later)");
+        conversation.add("I finally graduated and I got into a college in America.");
+        conversation.add("I finally come to where she grows up.");
+        conversation.add("...");
+        conversation.add("(On the first day of school)");
+        conversation.add("Hey Riku!!!");
+        conversation.add("Oh Miki!!!!!");
+        conversation.add("What a coincidence!!!!");
+        conversation.add("Well...I guess that what we call a \"suprise\"!");
+        conversation.add("---HAPPY END---");
     }
     private void narrator() {
         TextView characterName = findViewById(R.id.characterName);
         ImageView miki = findViewById(R.id.miki);
+        ImageView daxue = findViewById(R.id.daxue);
         ConstraintLayout game = findViewById(R.id.game);
         ImageButton next = findViewById(R.id.next);
         if (index == 1) {
@@ -146,6 +161,25 @@ public class Chapter4Activity extends AppCompatActivity {
         }
         if (index == 13) {
             characterName.setVisibility(View.INVISIBLE);
+            game.setBackgroundResource(R.drawable.black);
+            miki.setVisibility(View.INVISIBLE);
+        }
+        if (index == 26) {
+            characterName.setVisibility(View.VISIBLE);
+            characterName.setText("Miki");
+            game.setBackgroundResource(R.drawable.daxue);
+            daxue.setVisibility(View.VISIBLE);
+        }
+        if (index ==27) {
+            characterName.setText("You");
+        }
+        if (index == 28) {
+            characterName.setText("Miki & You");
+        }
+        if (index == 29) {
+            characterName.setVisibility(View.INVISIBLE);
+            game.setBackgroundResource(R.drawable.black);
+            daxue.setVisibility(View.INVISIBLE);
         }
     }
 }

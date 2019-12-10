@@ -21,6 +21,18 @@
         app:srcCompat="@drawable/huiyi" />
 
     <ImageView
+        android:id="@+id/daxue"
+        android:layout_width="293dp"
+        android:layout_height="621dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/daxuesheng" />
+
+    <ImageView
         android:id="@+id/textdown"
         android:layout_width="477dp"
         android:layout_height="126dp"
