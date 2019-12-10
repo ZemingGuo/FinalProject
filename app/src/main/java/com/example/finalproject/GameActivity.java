@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -18,15 +19,44 @@ public class GameActivity extends AppCompatActivity {
     private List<String> conversation = new ArrayList<>();
     int index = 0;
     private static int value = 0;
+    private MediaPlayer mMediaPlayer;
+    private ImageButton pause, play;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        mMediaPlayer = MediaPlayer.create(this, R.raw.wind);
+        mMediaPlayer.start();
         addStory();
         ImageButton next = findViewById(R.id.next);
         TextView conv = findViewById(R.id.conversation);
         Intent intent = new Intent(this, Chapter2Activity.class);
+        pause = findViewById(R.id.pause);
+        play = findViewById(R.id.play);
+        play.setVisibility(View.INVISIBLE);
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mMediaPlayer.start();
+                play.setVisibility(View.INVISIBLE);
+                pause.setVisibility(View.VISIBLE);
+            }
+        });
+        pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mMediaPlayer.pause();
+                pause.setVisibility(View.INVISIBLE);
+                play.setVisibility(View.VISIBLE);
+            }
+        });
+        mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.start();
+            }
+        });
         next.setOnClickListener(unused -> {
             if (index < conversation.size()) {
                 conv.setText(conversation.get(index));
@@ -35,6 +65,7 @@ public class GameActivity extends AppCompatActivity {
             } else {
                 //intent.putExtra("value", value);
                 finish();
+                mMediaPlayer.release();
                 startActivity(intent);
             }
         });
@@ -163,4 +194,6 @@ public class GameActivity extends AppCompatActivity {
     public static int getValue() {
         return value;
     }
+
+
 }
