@@ -3,8 +3,6 @@ package com.example.finalproject;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -140,6 +138,7 @@ public class Chapter2Activity extends AppCompatActivity {
         }
         if (index == 5) {
             index = 25;
+            miki.setVisibility(View.VISIBLE);
         }
         if (index == 7) {
             index = 25;
@@ -150,9 +149,12 @@ public class Chapter2Activity extends AppCompatActivity {
         if (index == 10) {
             characterName.setVisibility(View.VISIBLE);
             characterName.setText("You");
+            game.setBackgroundResource(R.drawable.yu);
+            miki.setVisibility(View.VISIBLE);
         }
         if (index == 11) {
             characterName.setText("Miki");
+            game.setBackgroundResource(R.drawable.yu);
         }
         if (index == 12) {
             characterName.setVisibility(View.INVISIBLE);
@@ -173,8 +175,11 @@ public class Chapter2Activity extends AppCompatActivity {
         if (index == 17) {
             characterName.setVisibility(View.VISIBLE);
             characterName.setText("You");
+            game.setBackgroundResource(R.drawable.dasan);
+            miki.setVisibility(View.INVISIBLE);
         }
         if (index == 18) {
+            game.setBackgroundResource(R.drawable.yu);
             characterName.setVisibility(View.INVISIBLE);
         }
         if (index == 19) {
@@ -233,6 +238,7 @@ public class Chapter2Activity extends AppCompatActivity {
             });
         }
         if (index == 20) {
+            miki.setVisibility(View.VISIBLE);
             characterName.setVisibility(View.VISIBLE);
             characterName.setText("Miki");
         }
@@ -241,6 +247,7 @@ public class Chapter2Activity extends AppCompatActivity {
         }
         if (index == 22) {
             characterName.setVisibility(View.INVISIBLE);
+            miki.setVisibility(View.VISIBLE);
             index = 25;
         }
         if (index == 23) {
