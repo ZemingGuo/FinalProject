@@ -180,6 +180,7 @@ public class Chapter4Activity extends AppCompatActivity {
             characterName.setVisibility(View.INVISIBLE);
             game.setBackgroundResource(R.drawable.black);
             daxue.setVisibility(View.INVISIBLE);
+            //..
         }
     }
 }
