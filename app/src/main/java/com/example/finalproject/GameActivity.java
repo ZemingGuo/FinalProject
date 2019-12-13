@@ -72,36 +72,20 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void addStory() {
-        //旁白
-        conversation.add("Ten years ago...");
-        conversation.add("Miki's parents came to Japan to do business. At that time, Miki and Riku lived in the same neighborhood.");
-        //女主
-        conversation.add("Hello...My name is M..M..iki...");
-        conversation.add("Nice to meet you guys....");
-        //旁白
-        conversation.add("Miki standing beside a crowed of Japanese kids and speaking nervously.");
-        conversation.add("But she didn't get any answer from the kids, because those kids didn't " +
-                "want to play with a foreigner who can not even speak Japanese coherently.");
-        //女主
-        conversation.add("Ummm...");
-        //旁白
-        conversation.add("Little Miki standing there with tears in her eyes.");
-        //男主
-        conversation.add("Hey, what your name!");
-        //女主
-        conversation.add("M..Miki.");
-        //旁白
-        conversation.add("The boy was different from any other kid Miki had met before.");
-        conversation.add("He has an amiable smile, like the sun in the sky.");
-        //男主
-        conversation.add("Let's go to the garden! I will show you some lovely flowers!");
-        //女主
-        conversation.add("...");
-        //旁白
-        conversation.add("From then on, they became each other's best friend.");
-        conversation.add("Until one day....");
-        //旁白
-        conversation.add("Miki's parents took her back to America.");
+        conversation.add("(Walks in)");
+        conversation.add("Good morning, everyone. This is Miki, our new exchange student this year.");
+        conversation.add("Miki comes from America. She will be with us for this semester, and she will return home by the end of the semester.");
+        conversation.add("Let's welcome Miki and hope she has a good time with us!");
+        conversation.add("Hello everyone! Nice to meet you~!");
+        conversation.add("(School ends)");
+        conversation.add("Hello~");
+        conversation.add("I finally meet you, Watanabe jun~");
+        conversation.add("Your choice...");
+        conversation.add("Ummm...He-hello.");
+        conversation.add("(Smiles) 'Nice to meet you' is what we say in Japanese when we first meet other people~");
+        conversation.add("Haha you are right... Nice to meet you~!");
+        conversation.add("Miki smiles to you without a word and walk away.");
+        conversation.add("A trace of disappointment appears in her eyes.");
     }
     private void narrator() {
         TextView characterName = findViewById(R.id.characterName);
